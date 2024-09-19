@@ -1,0 +1,291 @@
+/*
+    Autor:Edwind Fontalvo Velazco
+    Hoja de estilo del proyecto curso de programación a nivel explorador
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Slabo+13px&family=Slabo+27px&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+:root {
+    --color-bg-1: #f8f8f8;
+    --color-txt-1: #fff;
+    --color-titulo: #4caf50;
+    --color-boder-bottom: #79cf8f;
+    --color-bg-2: #073f09;
+    --fuente-font-1: "Poppins", sans-serif;
+    --fuente-font-2: "Oswald", sans-serif;
+    --fuente-font-3: "Montserrat", sans-serif;
+    --fuente-font-4: "Mulish", sans-serif;
+    --fuente-font-5: "Open Sans", sans-serif;
+    --fuente-font-6: "Raleway", sans-serif;
+    --fuente-font-7: "Slabo 13px", serif;
+    --fuente-font-8: "Slabo 27px", serif;
+    --fuente-font-9: "Source Sans 3", sans-serif;
+}
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: var(--fuente-font-1);
+    padding: 0;
+    background: #f8f8f8;
+    color: #333;
+}
+header {
+    background-image: url(assets/img/banner.png);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-principal {
+    background-image: url(../img/banner.PNG);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-barra_menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#menu,
+#labelmenu {
+    display: none;
+}
+nav {
+    background-color: #188a1c;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+nav ul li {
+    display: inline;
+    font-size: 1.2em;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em 0 0;
+}
+nav li:hover {
+    background-color: var(--color-titulo);
+    padding: 25px;
+    border-radius: 20px 20px 20px 0px;
+    border-bottom: 20px solid var(--color-boder-bottom);
+}
+.icon {
+    width: 40px;
+    height: 40px;
+}
+.home {
+    display: flex;
+    justify-content: end;
+}
+.titulo {
+    margin: 10% 0 0 35%;
+    color: var(--color-bg-2);
+    font-size: 2em;
+    font-family: var(--fuente-font-6);
+}
+.titulo-principal {    
+    margin: 10% 0 0 35%;
+    color: #4caf50;
+    font-size: 2em;
+    font-family: var(--fuente-font-3);
+}
+.subtitulo {
+    font-size: 1.6em;
+}
+section {
+    margin: 2em;
+    padding: 1em;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container-ppal {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 3% 0;
+}
+.img-ppal {
+    width: 50%;
+}
+.imagenes {
+    width: 60%;
+}
+.container-gallery2 {
+    display: flex;
+}
+.img-gallery {
+    width: 20%;
+}
+.contendorimagenes img:first-child {
+    margin-right: 10px;
+}
+.imagenes:hover {
+    opacity: 0.9;
+}
+/* Carrusel de imagenes - Cundinamarca*/
+.container-gallery2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10vmin;
+    font-family: sans-serif;
+    overflow: hidden;
+    transform: skew(5deg);
+}
+.card-g {
+    flex: 1;
+    transition: all 1s ease-in-out;
+    height: 75vmin;  /*altura de la galeria*/
+    position: relative;
+}
+.card-g:not(:nth-child(6)){
+    margin-right: 0.6em;
+}
+.img-gallery{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    filter: grayscale(100%);
+}
+.header-gallery {
+    color: black;
+    background-color: var(--color-titulo);
+    padding: 0.5em;
+    transform: rotate(-90deg);
+    transform-origin: 0% 0%;
+    transition: all 0.5s ease-in-out;
+    min-width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 1em;
+    white-space: nowrap;
+}
+.card-g:hover {
+    flex-grow: 10;
+}
+.card-g:hover .img-gallery {
+    filter: grayscale(0);
+}
+.card-g:hover .header-gallery {
+    text-align: center;
+    top: calc(100% - 2em);
+    color: white;
+    background: var(--color-bg-2);
+    font-size: 2em;
+    transform: rotate(0deg) skew(-5deg);
+}
+/* Fin Carta Carrusel */
+
+h2 {
+    color: var(--color-titulo);
+}
+
+article {
+    margin: 0 10% 0 10%;
+}
+.container1-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.imagen {
+    width: 90%;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid var(--color-titulo);
+}
+section p {
+    line-height: 2.0;
+    text-align: justify;
+}
+.video {
+    border: 3px solid var(--color-bg-2);
+    width: 860px;
+    height: 615px;
+    /* width: 100%;
+    height: 700px; */
+    text-align: center;
+    
+}
+.container-video {
+    display: flex;
+    justify-content: center;
+}
+.container-contacto {
+    list-style: none;
+    color: var(--color-bg-2);
+}
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #188a1c;
+    color: #073f09;
+    height: 500px;
+    margin-top: 200px;
+}
+
+.cajafooter {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    padding: 30px;
+    color: #073f09;
+    margin: -60px 0 0 0;
+    font-size: 1em;
+    border-radius: 0px 0px 0px 0px;
+    border-bottom: 00px solid #79cf8f;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer p {
+    text-align: center;
+}
+
+.linkfooter {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 00px 00px 00px 00px;
+    border-bottom: 00px solid #79cf8f;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 32%;
+}
+
+footer a {
+    color: #073f09;
+    margin-right: 10px;
+}
+/***********************Mapa Interactivo*************************************/
+.titulomapa{
+    text-align: center;
+    margin-bottom: 50px;   
+}
+#cajamapa{
+    display: flex;
+    margin: 0 2% 0 2%;
+}
+#mapa{
+    width: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+#inforegion{
+  width: 50%;
+}
+#mapamovil{
+    display: none;
+}
